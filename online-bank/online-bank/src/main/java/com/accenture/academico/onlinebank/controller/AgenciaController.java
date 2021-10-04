@@ -20,7 +20,7 @@ public class AgenciaController {
     public Agencia cadastraCliente(@Valid @RequestBody Agencia agencia) {
         return service.cadastraAgencia(agencia);
     }
-
+0
     @GetMapping(path = "agencias")
     public List<Agencia> consultaAgencias() {
         return service.consultaAgencias();
