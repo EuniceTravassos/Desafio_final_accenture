@@ -80,5 +80,8 @@ public class ContaCorrenteService {
             } else {
                 return false;
             }
+        public boolean transferencia(Cliente cliente) {
+
+        }
     }
 }

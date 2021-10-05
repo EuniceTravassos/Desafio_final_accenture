@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class ClienteService {
 
-
+    @NotBlank
     @Autowired
     private ClienteDaoI dao;
 

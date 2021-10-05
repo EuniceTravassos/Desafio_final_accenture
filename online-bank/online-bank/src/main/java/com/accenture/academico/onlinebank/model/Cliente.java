@@ -10,18 +10,24 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idCliente")
+    @NotBlack("Campo não informado")
     private int idCliente;
 
     @NotNull
     @Column(name = "clienteNome")
+    @NotBlack("Campo não informado")
+    @Pattern(regexp ="[A-Z]+(.)*")
     private String clienteNome;
 
     @NotNull
     @Column(name = "clienteCpf")
+    @NotBlack("Campo não informado")
+    @CPF
     private String clienteCpf;
 
     @NotNull
     @Column(name = "clienteFone")
+    @NotBlack("Campo não informado")
     private String clienteFone;
 
     @NotNull
@@ -30,6 +36,7 @@ public class Cliente {
 
     @NotNull
     @ManyToOne
+    @NotBlack("Campo não informado")
     private Agencia agencia;
 
     @OneToMany(cascade = CascadeType.ALL)
@@ -46,6 +53,8 @@ public class Cliente {
         this.contaCorrentes = contaCorrentes;
         this.agencia = agencia;
         this.extratos = extratos;
+        //this.transferencia = tranferencia;
+
     }
 
     public int getIdCliente() {

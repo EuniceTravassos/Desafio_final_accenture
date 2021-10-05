@@ -11,18 +11,22 @@ public class Agencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idAgencia")
+    @NotBlack("Campo não informado")
     private int idAgencia;
 
     @NotNull
     @Column(name = "nomeAgencia")
+    @NotBlack("Campo não informado")
     private String nomeAgencia;
 
     @NotNull
     @Column(name = "endereco")
+    @NotBlack("Campo não informado")
     private String endereco;
 
     @NotNull
     @Column(name = "telefone")
+    @NotBlack("Campo não informado")
     private String telefone;
 
 

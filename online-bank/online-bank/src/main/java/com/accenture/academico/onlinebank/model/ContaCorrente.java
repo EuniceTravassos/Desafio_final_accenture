@@ -8,12 +8,19 @@ public class ContaCorrente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idContaCorrente")
+    @NotBlack("Campo não informado")
     private int idContaCorrente;
+
     @Column(name = "contaCorrenteAgencia")
+    @NotBlack("Campo não informado")
     private String contaCorrenteAgencia;
+
     @Column(name = "contaCorrenteNumero")
+    @NotBlack("Campo não informado")
     private String contaCorrenteNumero;
+
     @Column(name = "contaCorrenteSaldo")
+    @NotBlack("Campo não informado")
     private double contaCorrenteSaldo;
 
     public ContaCorrente() {
